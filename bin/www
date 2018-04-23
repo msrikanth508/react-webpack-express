@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+var debug = require('debug')('MODULE_NAME');
+var app = require('../server');
+var colors = require('colors');
+
+app.set('port', process.env.PORT || 8000);
+app.set('env', process.env.NODE_ENV || 'development');
+
+var server = app.listen(app.get('port'), function() {
+  console.log(`Express server listening on port ${app.get('port')} (${app.get('env')} mode)`.green);
+});

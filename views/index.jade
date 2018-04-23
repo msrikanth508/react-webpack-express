@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    meta(name="viewport", content="initial-scale=1")
+    title= title
+    link(rel='stylesheet', href=`/${publicPath}css/bundle.css`)
+  body
+    block content
+    #app
+    script(type="text/javascript", src=`/${publicPath}js/vendor.js`)
+    script(type="text/javascript", src=`/${publicPath}js/bundle.js`)
+  
